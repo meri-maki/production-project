@@ -1,0 +1,15 @@
+.sidebar {
+  height: calc(100vh - var(--navbar-h));
+  width: var(--sidebar-w-full);
+  background: var(--inv-primary-color);
+  position: relative;
+  padding: 1rem;
+  transition: width 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.collapsed {
+  width: var(--sidebar-w-collapsed);
+}

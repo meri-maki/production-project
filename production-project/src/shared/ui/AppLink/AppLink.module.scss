@@ -1,0 +1,16 @@
+.applink {
+  font: var(--font-m);
+}
+
+.applink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
