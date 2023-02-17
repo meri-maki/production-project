@@ -1,15 +1,15 @@
 .navbar {
-  height: var(--navbar-h);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--inv-secondary-color);
-  padding: 0 2rem;
+    height: var(--navbar-h);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--inv-secondary-color);
+    padding: 0 2rem;
 }
 
 .navLinks {
-  display: flex;
-  justify-content: end;
-  gap: 1rem;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
 }

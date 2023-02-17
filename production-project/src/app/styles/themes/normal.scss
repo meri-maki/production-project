@@ -1,14 +1,12 @@
 .app.light {
-  --bg-color: var(--sky-white);
-  --primary-color: var(--ink-dark);
-  --secondary-color: var(--ink-base);
-
-  --inv-primary-color: var(--sky-light);
-  --inv-secondary-color: var(--sky-base);
-
-  --accent-color: var(--primary-base);
+    --bg-color: var(--sky-white);
+    --primary-color: var(--ink-dark);
+    --secondary-color: var(--ink-base);
+    --inv-primary-color: var(--sky-light);
+    --inv-secondary-color: var(--sky-base);
+    --accent-color: var(--primary-base);
 }
 
 .app.light svg {
-  fill: var(--ink-dark);
+    fill: var(--ink-dark);
 }

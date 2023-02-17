@@ -1,20 +1,19 @@
 .app.dark {
-  --bg-color: var(--ink-base);
-  --primary-color: var(--sky-light);
-  --secondary-color: var(--sky-base);
-
-  --inv-primary-color: var(--ink-darker);
-  --inv-secondary-color: var(--ink-light);
-
-  --accent-color: var(--primary-base);
-
-  --shadow-s: 0px 0px 1px rgba(130, 130, 130, 0.4),
-    0px 0px 8px rgba(130, 130, 130, 0.8);
-  --shadow-m: 0px 0px 1px rgba(130, 130, 130, 0.8),
-    0px 1px 8px 2px rgba(130, 130, 130, 0.8);
-  --shadow-l: 0px 1px 24px 8px rgba(130, 130, 130, 0.8);
+    --bg-color: var(--ink-base);
+    --primary-color: var(--sky-light);
+    --secondary-color: var(--sky-base);
+    --inv-primary-color: var(--ink-darker);
+    --inv-secondary-color: var(--ink-light);
+    --accent-color: var(--primary-base);
+    --shadow-s:
+        0 0 1px rgb(130 130 130 / 40%),
+        0 0 8px rgb(130 130 130 / 80%);
+    --shadow-m:
+        0 0 1px rgb(130 130 130 / 80%),
+        0 1px 8px 2px rgb(130 130 130 / 80%);
+    --shadow-l: 0 1px 24px 8px rgb(130 130 130 / 80%);
 }
 
 .app.dark svg {
-  fill: var(--sky-light);
+    fill: var(--sky-light);
 }

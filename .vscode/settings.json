@@ -1,4 +1,10 @@
 {
     "git.ignoreLimitWarning": true,
-    "eslint.codeActionsOnSave.rules": true
+    "eslint.codeActionsOnSave.rules": true,
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "stylelint.enable": true,
+    "stylelint.validate": ["css", "scss"],
+    "stylelint.configFile": "/Users/anastasiazhuravleva/CODING/PROJECTS/ULBI COURSE/production-project/.stylelintrc.json"
 }
