@@ -1,28 +1,28 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true, // не позволяет использовать переменные без типа те тип ANY
-    "module": "ESNext",
-    "target": "es5", // compilation for older browsers
-    "jsx": "react-jsx",
-    "allowJs": true, // обработка не только ts но и js
-    "moduleResolution": "node",
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true, // не позволяет использовать переменные без типа те тип ANY
+        "module": "ESNext",
+        "target": "es5", // compilation for older browsers
+        "jsx": "react-jsx",
+        "allowJs": true, // обработка не только ts но и js
+        "moduleResolution": "node",
 
-    "baseUrl": ".", // для абсолютного испорта
-    "paths": {
-      "*": ["./src/*"]
-    },
-    /*  To make imports do this by default and keep import _ from 'lodash'; syntax in TypeScript,
+        "baseUrl": ".", // для абсолютного испорта
+        "paths": {
+            "*": ["./src/*"]
+        },
+        /*  To make imports do this by default and keep import _ from 'lodash'; syntax in TypeScript,
      set "allowSyntheticDefaultImports" : true and 
     "esModuleInterop" : true in your tsconfig.json file. This is related to 
     TypeScript configuration and mentioned in our guide only for your 
     information. */
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJs"
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJs"
+        }
     }
-  }
 }
