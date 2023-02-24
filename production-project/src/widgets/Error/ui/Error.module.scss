@@ -1,0 +1,10 @@
+.error {
+    min-height: calc(100vh - var(--navbar-h));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font: var(--font-l);
+    gap: 2rem;
+}

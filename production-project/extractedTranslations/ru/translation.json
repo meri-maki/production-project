@@ -1,7 +1,14 @@
 {
   "about": "about",
   "about-page": "about-page",
+  "bug-btn": "bug-btn",
+  "error-msg": "error-msg",
   "lang": "lang",
+  "loading": "loading",
   "main": "main",
-  "main-page": "main-page"
+  "main-page": "main-page",
+  "notFound": "notFound",
+  "reset-btn": "reset-btn",
+  "reset-msg": "reset-msg",
+  "Главная страница": "Главная страница"
 }

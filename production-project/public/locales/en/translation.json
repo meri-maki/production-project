@@ -1,5 +1,10 @@
 {
-  "main": "Main",
-  "about": "About",
-  "lang": "Русский"
+    "main": "Main",
+    "about": "About",
+    "lang": "Русский",
+    "loading": "Загрузка...",
+    "error-msg": "Что-то пошло не так...",
+    "reset-btn": "Перезагрузить страницу",
+    "bug-btn": "Создать баг"
+
 }

@@ -19,6 +19,8 @@ module.exports = {
     },
     plugins: ['react', '@typescript-eslint', 'i18next'],
     rules: {
+        semi: 0,
+        '@typescript-eslint/semi': 'off',
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
@@ -37,17 +39,19 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        semi: 'off',
         'object-curly-newline': 'off',
         'implicit-arrow-linebreak': 'off',
         'comma-dangle': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': [
+            'error',
+            { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
+        ],
         'max-len': [
             'error',
             {
                 code: 120,
                 tabWidth: 2,
-                ignoreComments: true, // "comments": 80
+                ignoreComments: true,
                 ignoreUrls: true,
                 ignoreStrings: true,
                 ignoreTemplateLiterals: true,
@@ -57,4 +61,4 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
     },
-}
+};

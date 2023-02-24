@@ -5,6 +5,7 @@
         "no-descending-specificity": null,
         "no-empty-source": null,
         "selector-class-pattern": null,
-        "no-missing-end-of-source-newline": null
+        "no-missing-end-of-source-newline": null,
+        "keyframes-name-pattern": null
     }
 }
