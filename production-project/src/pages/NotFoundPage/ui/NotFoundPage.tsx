@@ -8,9 +8,5 @@ interface NotFoundPageProps {
 export const NotFoundPage = ({ className }: NotFoundPageProps) => {
     const { t } = useTranslation('notFound')
 
-    return (
-        <div className={classNames(cls.notfoundpage, {}, [className])}>
-            {t('notFound')}
-        </div>
-    )
+    return <div className={classNames(cls.notfoundpage, {}, [className])}>{t('notFound')}</div>
 }

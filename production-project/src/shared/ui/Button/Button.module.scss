@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     flex-grow: 0;
+    color: var(--primary-color);
 }
 
 .button:active {
@@ -15,8 +16,7 @@
 }
 
 .primary {
-    background: var(--accent-color);
-    color: var(--sky-light);
+    background: var(--inv-primary-color);
 }
 
 .secondary {

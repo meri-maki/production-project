@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { ErrorInfo, ReactNode, Suspense } from 'react'
 import { Error } from 'widgets/Error'
 
@@ -14,7 +15,7 @@ interface ErrorBoundaryState {
 // error boundary catches errors without full tree crashing
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
     constructor(props: ErrorBoundaryProps | Readonly<ErrorBoundaryProps>) {
-        super(props);
+        super(props)
         this.state = { hasError: false }
     }
 
@@ -37,7 +38,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
             return <Suspense fallback=""><Error /></Suspense>
         }
 
-        return children;
+        return children
     }
 }
 

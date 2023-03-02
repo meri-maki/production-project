@@ -19,7 +19,7 @@ module.exports = {
     },
     plugins: ['react', '@typescript-eslint', 'i18next'],
     rules: {
-        semi: 0,
+        semi: ['warn', 'never'],
         '@typescript-eslint/semi': 'off',
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -69,4 +69,4 @@ module.exports = {
             },
         },
     ],
-};
+}
