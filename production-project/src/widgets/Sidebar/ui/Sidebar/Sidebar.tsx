@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import Menu from 'shared/assets/icons/menu.svg'
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
-import cls from './Sidebar.module.scss'
+import { useState } from "react"
+import { classNames } from "shared/lib/classNames/classNames"
+import { Button, ButtonTheme } from "shared/ui/Button/Button"
+import Menu from "shared/assets/icons/menu.svg"
+import { ThemeSwitcher } from "widgets/ThemeSwitcher"
+import cls from "./Sidebar.module.scss"
 
 interface SidebarProps {
     className?: string

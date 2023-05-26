@@ -1,14 +1,14 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Theme } from 'app/providers/ThemeProvider'
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Error } from './Error'
+import { ComponentMeta, ComponentStory } from "@storybook/react"
+import { Theme } from "app/providers/ThemeProvider"
+import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator"
+import { Error } from "./Error"
 
 export default {
-    title: 'widget/Error',
+    title: "widget/Error",
     component: Error,
 
     argTypes: {
-        backgroundColor: { control: 'color' }
+        backgroundColor: { control: "color" }
     }
 } as ComponentMeta<typeof Error>
 

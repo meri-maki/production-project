@@ -1,12 +1,12 @@
-import { ButtonHTMLAttributes, FC } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './Button.module.scss'
+import { ButtonHTMLAttributes, FC } from "react"
+import { classNames } from "shared/lib/classNames/classNames"
+import cls from "./Button.module.scss"
 
 export enum ButtonTheme {
-    PRIMARY = 'primary',
-    SECONDARY = 'secondary',
-    OUTLINED = 'outlined',
-    ICON = 'icon',
+    PRIMARY = "primary",
+    SECONDARY = "secondary",
+    OUTLINED = "outlined",
+    ICON = "icon",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

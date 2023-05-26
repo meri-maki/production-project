@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-import React, { ErrorInfo, ReactNode, Suspense } from 'react'
-import { Error } from 'widgets/Error'
+import React, { ErrorInfo, ReactNode, Suspense } from "react"
+import { Error } from "widgets/Error"
 
 /* import { withTranslation } from 'react-i18next'; */
 

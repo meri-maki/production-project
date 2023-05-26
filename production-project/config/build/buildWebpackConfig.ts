@@ -1,9 +1,9 @@
-import webpack from 'webpack'
-import { buildDevServer } from './buildDevServer'
-import { buildLoaders } from './buildLoaders'
-import { buildPlugins } from './buildPlugins'
-import { buildResolvers } from './buildResolvers'
-import { BuildOptions } from './types/config'
+import webpack from "webpack"
+import { buildDevServer } from "./buildDevServer"
+import { buildLoaders } from "./buildLoaders"
+import { buildPlugins } from "./buildPlugins"
+import { buildResolvers } from "./buildResolvers"
+import { BuildOptions } from "./types/config"
 
 export function buildWebpackConfig(
     options: BuildOptions
@@ -15,7 +15,7 @@ export function buildWebpackConfig(
         entry: paths.entry, // стартовая точка приложения
         output: {
             // указываем куда делать сборку
-            filename: '[name].[contenthash].js', // contenthash решает проблему с кэширыванием в браузере создавая уникальные значения после main
+            filename: "[name].[contenthash].js", // contenthash решает проблему с кэширыванием в браузере создавая уникальные значения после main
             path: paths.build,
             clean: true,
         },
@@ -26,7 +26,7 @@ export function buildWebpackConfig(
         },
         // to do imports without {component}
         resolve: buildResolvers(options),
-        devtool: isDev ? 'inline-source-map' : false, // позволяет при сборке отследить в каком файле ошибка
+        devtool: isDev ? "inline-source-map" : false, // позволяет при сборке отследить в каком файле ошибка
         devServer: isDev ? buildDevServer(options) : undefined,
     }
 }

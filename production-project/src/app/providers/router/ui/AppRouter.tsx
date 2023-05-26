@@ -1,8 +1,8 @@
-import { Suspense } from 'react'
+import { Suspense } from "react"
 
-import { Route, Routes } from 'react-router-dom'
-import { routeCongig } from 'shared/config/routeConfig/routeConfig'
-import { PageLoader } from 'widgets/PageLoader'
+import { Route, Routes } from "react-router-dom"
+import { routeCongig } from "shared/config/routeConfig/routeConfig"
+import { PageLoader } from "widgets/PageLoader"
 
 const AppRouter = () => (
     <Routes>

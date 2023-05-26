@@ -1,8 +1,8 @@
-import { useTranslation } from 'react-i18next'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
-import { LangSwitcher } from 'widgets/LangSwitcher'
-import cls from './Navbar.module.scss'
+import { useTranslation } from "react-i18next"
+import { classNames } from "shared/lib/classNames/classNames"
+import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink"
+import { LangSwitcher } from "widgets/LangSwitcher"
+import cls from "./Navbar.module.scss"
 
 interface NavBarProps {
     className?: string
@@ -20,11 +20,11 @@ export const Navbar = ({ className }: NavBarProps) => {
                     className={cls.mainLink}
                     to="/"
                 >
-                    {t('main')}
+                    {t("main")}
                 </AppLink>
 
                 <AppLink theme={AppLinkTheme.PRIMARY} to="/about">
-                    {t('about')}
+                    {t("about")}
                 </AppLink>
             </div>
         </div>

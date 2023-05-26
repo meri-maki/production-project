@@ -1,8 +1,10 @@
-import { useTranslation } from 'react-i18next'
+import { classNames } from "shared/lib/classNames/classNames"
+import cls from "./AboutPage.module.scss"
 
-const AboutPage = () => {
-    const { t } = useTranslation('about')
-    return <div>{t('about-page')}</div>
+interface AboutPageProps {
+    className?: string
 }
 
-export default AboutPage
+export const AboutPage = ({ className }: AboutPageProps) => (
+    <div className={classNames(cls.AboutPage, {}, [className])} />
+)

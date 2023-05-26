@@ -12,7 +12,7 @@ export function classNames(
         cls,
         ...additional.filter(Boolean),
         ...Object.entries(mods)
-            .filter(([_, value]) => Boolean(value))
+            .filter(([_, value]) => Boolean(value)) // the first value in each array (represented by the underscore) is ignored and the filter only uses the second value (value).
             .map(([cls]) => cls),
-    ].join(' ')
+    ].join(" ")
 }

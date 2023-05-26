@@ -1,14 +1,14 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Theme } from 'app/providers/ThemeProvider'
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { PageLoader } from './PageLoader'
+import { ComponentMeta, ComponentStory } from "@storybook/react"
+import { Theme } from "app/providers/ThemeProvider"
+import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator"
+import { PageLoader } from "./PageLoader"
 
 export default {
-    title: 'widget/PageLoader',
+    title: "widget/PageLoader",
     component: PageLoader,
 
     argTypes: {
-        backgroundColor: { control: 'color' }
+        backgroundColor: { control: "color" }
     }
 } as ComponentMeta<typeof PageLoader>
 
