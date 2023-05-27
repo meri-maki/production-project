@@ -34,7 +34,10 @@ export default {
     rootDir: "../../",
 
     // The glob patterns Jest uses to detect test files
-    testMatch: "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)",
+    testMatch: [
+        // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
+        "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)",
+    ],
 
     setupFilesAfterEnv: ["<rootDir>config/jest/setupTests.ts"],
 
