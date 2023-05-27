@@ -9,7 +9,8 @@ export function buildPlugins({
     paths,
     isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-    return [
+    const plugins = [
+
         new HtmlWebpackPlugin({
             template: paths.html,
         }),
@@ -21,10 +22,16 @@ export function buildPlugins({
         new webpack.DefinePlugin({
             __IS__DEV: JSON.stringify(isDev),
         }),
-        new webpack.HotModuleReplacementPlugin(),
         new ReactRefreshWebpackPlugin(),
-        new BundleAnalyzerPlugin(
-            { openAnalyzer: false } // чтобы не загружался каждый раз
-        ) // анализ бандла (размер)
+
     ]
+
+    if (isDev) {
+        plugins.push(new webpack.HotModuleReplacementPlugin())
+        plugins.push(new BundleAnalyzerPlugin(
+            { openAnalyzer: false } // чтобы не загружался каждый раз анализ бандла (размер)
+        ))
+    }
+
+    return plugins
 }
