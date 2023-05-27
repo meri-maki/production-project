@@ -29,7 +29,7 @@ export default {
     moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json", "node"],
 
     // The root directory that Jest should scan for tests and modules within
-    rootDir: "../../",
+    rootDir: "../",
 
     // The glob patterns Jest uses to detect test files
     testMatch: ["<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"],
