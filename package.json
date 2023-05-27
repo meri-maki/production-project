@@ -99,11 +99,5 @@
 				"preset": "iPhone 7"
 			}
 		}
-	},
-	"jest": {
-		"rootDir": "src",
-		"testMatch": [
-			"**/__tests__/**/*.test.js"
-		]
 	}
 }
