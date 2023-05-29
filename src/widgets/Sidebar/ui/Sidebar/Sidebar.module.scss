@@ -4,12 +4,32 @@
     background: var(--inv-primary-color);
     position: relative;
     padding: 1rem;
-    transition: width 0.3s ease-in-out;
+    transition: width 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
 
-.collapsed {
-    width: var(--sidebar-w-collapsed);
+    &.collapsed {
+        width: var(--sidebar-w-collapsed);
+
+        .switchers {
+            flex-direction: column;
+        }
+
+    }
+
+    .sidebarButton {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .switchers {
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
 }

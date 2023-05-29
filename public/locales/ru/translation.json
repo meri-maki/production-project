@@ -1,10 +1,10 @@
 {
-    "main": "Главная",
-    "about": "О нас",
-    "lang": "English",
-    "loading": "Loading...",
-    "error-msg": "Something went wrong...",
-    "reset-btn": "Refresh page",
-    "bug-btn": "Create a bug"
-
+	"main": "Главная",
+	"about": "О нас",
+	"lang": "English",
+	"langShort": "EN",
+	"loading": "Loading...",
+	"error-msg": "Something went wrong...",
+	"reset-btn": "Refresh page",
+	"bug-btn": "Create a bug"
 }

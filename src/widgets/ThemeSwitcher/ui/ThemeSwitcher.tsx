@@ -1,8 +1,7 @@
 import { Theme, useTheme } from "app/providers/ThemeProvider"
 import { classNames } from "shared/lib/classNames/classNames"
 import { Button, ButtonTheme } from "shared/ui/Button/Button"
-import LightIcon from "shared/assets/icons/light_mode.svg"
-import DarkIcon from "shared/assets/icons/dark_mode.svg"
+import { MdOutlineModeNight, MdOutlineWbSunny } from "react-icons/md"
 import cls from "./ThemeSwitcher.module.scss"
 
 interface ThemeSwitcherProps {
@@ -17,7 +16,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
             theme={ButtonTheme.ICON}
             className={classNames(cls.themeswitcher, {}, [className])}
         >
-            {theme === Theme.DARK ? <LightIcon /> : <DarkIcon />}
+            {theme === Theme.DARK ? <MdOutlineWbSunny /> : <MdOutlineModeNight />}
         </Button>
     )
 }

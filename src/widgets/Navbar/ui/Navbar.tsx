@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
+import { RoutePath } from "shared/config/routeConfig/routeConfig"
 import { classNames } from "shared/lib/classNames/classNames"
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink"
-import { LangSwitcher } from "widgets/LangSwitcher"
 import cls from "./Navbar.module.scss"
 
 interface NavBarProps {
@@ -13,17 +13,12 @@ export const Navbar = ({ className }: NavBarProps) => {
 
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
-            <LangSwitcher />
             <div className={cls.navLinks}>
-                <AppLink
-                    theme={AppLinkTheme.PRIMARY}
-                    className={cls.mainLink}
-                    to="/"
-                >
+                <AppLink theme={AppLinkTheme.PRIMARY} className={cls.mainLink} to={RoutePath.main}>
                     {t("main")}
                 </AppLink>
 
-                <AppLink theme={AppLinkTheme.PRIMARY} to="/about">
+                <AppLink theme={AppLinkTheme.PRIMARY} to={RoutePath.about}>
                     {t("about")}
                 </AppLink>
             </div>

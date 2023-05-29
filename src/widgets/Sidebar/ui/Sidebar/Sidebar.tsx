@@ -1,8 +1,10 @@
 import { useState } from "react"
 import { classNames } from "shared/lib/classNames/classNames"
 import { Button, ButtonTheme } from "shared/ui/Button/Button"
-import Menu from "shared/assets/icons/menu.svg"
+import { MdChevronLeft, MdChevronRight } from "react-icons/md"
+
 import { ThemeSwitcher } from "widgets/ThemeSwitcher"
+import { LangSwitcher } from "widgets/LangSwitcher"
 import cls from "./Sidebar.module.scss"
 
 interface SidebarProps {
@@ -14,21 +16,20 @@ export const Sidebar = ({ className }: SidebarProps) => {
         setCollapsed((prev) => !prev)
     }
     return (
-        <div
-            data-testid="sidebar"
-            className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
-                className,
-            ])}
-        >
+        <div data-testid="sidebar" className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
             <Button
                 data-testid="sidebar-toggle"
                 theme={ButtonTheme.ICON}
                 onClick={onToggle}
-                className={cls.collapseButton}
+                className={cls.sidebarButton}
             >
-                <Menu />
+                {collapsed ? <MdChevronLeft /> : <MdChevronRight />}
             </Button>
-            <ThemeSwitcher />
+            <div className={cls.switchers}>
+                <LangSwitcher short={collapsed} />
+
+                <ThemeSwitcher />
+            </div>
         </div>
     )
 }
