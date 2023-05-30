@@ -1,5 +1,5 @@
 {
 	"i18next.i18nPaths": "/Users/anastasiazhuravleva/CODING/PROJECTS/ULBI COURSE/production-project/public/locales,/Users/anastasiazhuravleva/CODING/PROJECTS/ULBI COURSE/production-project/src/shared/config/i18n",
-	"i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
-	"files.autoSave": "onFocusChange"
+	"i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"]
+	/* "files.autoSave": "onFocusChange" */
 }
