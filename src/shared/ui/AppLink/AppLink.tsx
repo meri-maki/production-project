@@ -5,7 +5,7 @@ import cls from "./AppLink.module.scss"
 
 export enum AppLinkTheme {
     PRIMARY = "primary",
-    SECONDARY = "secondary",
+    SECONDARY = "secondary"
 }
 
 interface AppLinkProps extends LinkProps {
@@ -13,17 +13,16 @@ interface AppLinkProps extends LinkProps {
     theme?: AppLinkTheme
 }
 export const AppLink: FC<AppLinkProps> = (props) => {
-    const {
-        className,
-        children,
-        to,
-        theme = AppLinkTheme.PRIMARY,
-        ...otherProps
-    } = props
+    const { className, children, to, theme = AppLinkTheme.PRIMARY, ...otherProps } = props
+
+    const mods: Record<string, boolean> = {
+        [cls[theme]]: true
+    }
+
     return (
         <Link
             to={to}
-            className={classNames(cls.applink, {}, [cls[theme]])}
+            className={classNames(cls.applink, mods, [className])}
             // [cls[theme]] - динамическая конструкция
             {...otherProps}
         >

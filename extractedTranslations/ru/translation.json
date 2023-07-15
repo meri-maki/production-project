@@ -1,10 +1,12 @@
 {
+  "": "",
   "about": "about",
   "about-page": "about-page",
   "bug-btn": "bug-btn",
   "error-msg": "error-msg",
   "lang": "lang",
   "loading": "loading",
+  "lorem": "lorem",
   "main": "main",
   "main-page": "main-page",
   "notFound": "notFound",
