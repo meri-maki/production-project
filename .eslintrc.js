@@ -13,7 +13,7 @@ module.exports = {
         ecmaVersion: "latest",
         sourceType: "module",
     },
-    plugins: ["react", "@typescript-eslint", "i18next"],
+    plugins: ["react", "@typescript-eslint", "i18next", "react-hooks"],
     rules: {
         semi: ["warn", "never"],
         quotes: ["error", "double"],
@@ -42,6 +42,8 @@ module.exports = {
         /* "react-hooks/rules-of-hooks": "error", */ // Checks rules of Hooks
         /*   "react-hooks/exhaustive-deps": "error", */ // Checks effect dependencies
         "react/no-children-prop": "off",
+        "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+        "react-hooks/exhaustive-deps": "error", // Checks effect dependencies
         "max-len": [
             "error",
             {

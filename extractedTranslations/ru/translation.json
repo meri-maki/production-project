@@ -6,12 +6,14 @@
   "error-msg": "error-msg",
   "lang": "lang",
   "loading": "loading",
+  "login": "login",
   "lorem": "lorem",
   "main": "main",
   "main-page": "main-page",
   "notFound": "notFound",
   "reset-btn": "reset-btn",
   "reset-msg": "reset-msg",
+  "Войти": "Войти",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте"
 }

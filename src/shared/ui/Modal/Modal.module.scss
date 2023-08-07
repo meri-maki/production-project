@@ -38,4 +38,14 @@
         }
 
     }
+
+    &.isClosing {
+        transition: opacity 0.3s ease;
+        opacity: 0;
+
+        .content {
+            transform: scale(0.5);
+        }
+
+    }
 }

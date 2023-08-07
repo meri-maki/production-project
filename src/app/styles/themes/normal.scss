@@ -5,8 +5,8 @@
     --inv-primary-color: var(--sky-light);
     --inv-secondary-color: var(--sky-base);
     --accent-color: var(--primary-base);
-}
 
-.app.light svg {
-    fill: var(--ink-dark);
+    svg {
+        fill: var(--ink-dark);
+    }
 }
