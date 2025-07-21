@@ -18,7 +18,9 @@
 		"storybook:build": "build-storybook -c ./config/storybook",
 		"visual:report:json": "node scripts/generate-visual-json-report.js",
 		"visual:report:html": "reg-cli --from .loki/report.json --report .loki/report.html",
-		"visual:report": "npm run visual:report:json && npm run visual:report:html"
+		"visual:report": "npm run visual:report:json && npm run visual:report:html",
+		"sync:version": "node scripts/sync-version-to-backend.js",
+		"deploy:prod": "npm run build:prod && npm run sync:version"
 	},
 	"keywords": [],
 	"author": "",

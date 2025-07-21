@@ -1,0 +1,46 @@
+name: Sync Frontend Version to Backend
+
+on:
+  push:
+    branches: [ main, master ]
+    paths: [ 'package.json' ]
+  release:
+    types: [ published ]
+
+jobs:
+  sync-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout frontend repo
+        uses: actions/checkout@v4
+        
+      - name: Extract frontend version
+        id: version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          MAJOR_VERSION=$(echo $VERSION | cut -d. -f1)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "major_version=$MAJOR_VERSION" >> $GITHUB_OUTPUT
+          
+      - name: Checkout backend repo
+        uses: actions/checkout@v4
+        with:
+          repository: 'your-org/backend-repo'  # Replace with your backend repo
+          token: ${{ secrets.BACKEND_REPO_TOKEN }}
+          path: backend
+          
+      - name: Update backend environment file
+        run: |
+          cd backend
+          echo "FRONTEND_MAJOR_VERSION=${{ steps.version.outputs.major_version }}" > .env.frontend-version
+          # Or update existing .env file
+          # sed -i 's/FRONTEND_MAJOR_VERSION=.*/FRONTEND_MAJOR_VERSION=${{ steps.version.outputs.major_version }}/' .env
+          
+      - name: Commit and push to backend
+        run: |
+          cd backend
+          git config user.name "Frontend Version Bot"
+          git config user.email "bot@yourcompany.com"
+          git add .env.frontend-version
+          git commit -m "Update frontend major version to ${{ steps.version.outputs.major_version }}"
+          git push
