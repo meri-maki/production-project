@@ -1,0 +1,65 @@
+name: Sync Frontend Version to Backend
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'package.json'
+
+jobs:
+  sync-version:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Frontend Repository
+      uses: actions/checkout@v3
+      
+    - name: Extract Version Info
+      id: version
+      run: |
+        VERSION=$(node -p "require('./package.json').version")
+        MAJOR_VERSION=$(echo $VERSION | cut -d. -f1)
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "major_version=$MAJOR_VERSION" >> $GITHUB_OUTPUT
+        echo "Frontend version: $VERSION (Major: $MAJOR_VERSION)"
+        
+    - name: Checkout Backend Repository
+      uses: actions/checkout@v3
+      with:
+        repository: YOUR_ORG/YOUR_BACKEND_REPO  # Replace with your backend repo
+        token: ${{ secrets.BACKEND_REPO_TOKEN }}  # You'll need to set this secret
+        path: backend
+        
+    - name: Update Backend Environment
+      run: |
+        cd backend
+        
+        # Update .env file
+        if [ -f .env ]; then
+          sed -i '/^FRONTEND_VERSION=/d' .env
+          sed -i '/^FRONTEND_MAJOR_VERSION=/d' .env
+        fi
+        
+        echo "FRONTEND_VERSION=${{ steps.version.outputs.version }}" >> .env
+        echo "FRONTEND_MAJOR_VERSION=${{ steps.version.outputs.major_version }}" >> .env
+        
+        # Alternative: Update a version config file
+        mkdir -p config
+        cat > config/frontend-version.json << EOF
+        {
+          "version": "${{ steps.version.outputs.version }}",
+          "majorVersion": "${{ steps.version.outputs.major_version }}",
+          "updatedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+        }
+        EOF
+        
+    - name: Commit and Push Changes
+      run: |
+        cd backend
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        
+        git add .env config/frontend-version.json
+        git commit -m "Update frontend version to ${{ steps.version.outputs.version }}" || exit 0
+        git push

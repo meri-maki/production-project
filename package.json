@@ -5,7 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "webpack serve --env port=3000",
+		"prebuild:prod": "node scripts/update-version-file.js",
 		"build:prod": "webpack  --env mode=production",
+		"prebuild:dev": "node scripts/update-version-file.js",
 		"build:dev": "webpack  --env mode=development",
 		"lint:ts": " eslint \"**/*.{ts,tsx}\"",
 		"lint:ts:fix": " eslint \"**/*.{ts,tsx}\" --fix",
