@@ -1,0 +1,125 @@
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  
+  &.deleting {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 16px;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.email {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.body {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.role {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.adminRole {
+  background: #ff6b6b;
+  color: white;
+}
+
+.userRole {
+  background: #4ecdc4;
+  color: white;
+}
+
+.moderatorRole {
+  background: #45b7d1;
+  color: white;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.active {
+  background: #51cf66;
+  color: white;
+}
+
+.inactive {
+  background: #868e96;
+  color: white;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.editBtn,
+.deleteBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.editBtn {
+  background: #339af0;
+  color: white;
+  
+  &:hover:not(:disabled) {
+    background: #228be6;
+  }
+}
+
+.deleteBtn {
+  background: #fa5252;
+  color: white;
+  
+  &:hover:not(:disabled) {
+    background: #f03e3e;
+  }
+}
